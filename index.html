@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity - Typing Speed Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Velocity.</h1>
+            <p>Elevate your typing speed</p>
+        </header>
+
+        <main>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <span>Time</span>
+                    <h2 id="time">60s</h2>
+                </div>
+                <div class="stat-box">
+                    <span>WPM</span>
+                    <h2 id="wpm">0</h2>
+                </div>
+                <div class="stat-box">
+                    <span>Accuracy</span>
+                    <h2 id="accuracy">100%</h2>
+                </div>
+            </div>
+
+            <div class="typing-container">
+                <div id="quote-display" class="quote-display">Press "Start Test" to begin...</div>
+                <input type="text" id="quote-input" class="quote-input" placeholder="Start typing here..." spellcheck="false" autocomplete="off" disabled>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn">Start Test</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+            
+            <div class="name-entry hidden" id="name-entry-screen">
+                <h3>Test Complete!</h3>
+                <p>You typed <span id="final-wpm" class="accent-text"></span> WPM with <span id="final-acc" class="accent-text"></span>% accuracy.</p>
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Enter your name..." />
+                    <button id="save-btn">Save Score</button>
+                </div>
+            </div>
+
+            <section class="leaderboard-section">
+                <h2>Top Typists</h2>
+                <ul id="leaderboard-list">
+                    <li>Loading scores...</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
